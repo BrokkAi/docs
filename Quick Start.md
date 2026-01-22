@@ -4,7 +4,7 @@
 
 [![](images/quick-start-image-1.png)](https://brokk.ai/dashboard?ref=blog.brokk.ai)
 
-__In the installer you will see a "Prereleases" option which means beta releases will be included in automatic updates. We recommend leaving it off unless a developer advises you to enable it to try out a feature or bug fix.__
+**In the installer you will see a "Prereleases" option which means beta releases will be included in automatic updates. We recommend leaving it off unless a developer advises you to enable it to try out a feature or bug fix.**
 
 The first launch opens the Project Chooser.
 

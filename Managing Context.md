@@ -24,15 +24,15 @@ You can also attach context by dragging and dropping files or folders from the P
 
 Brokk can add many types of context to the Workspace, some of these are:
 
-1.  An image file added from local disk
-2.  An ordinary source file
-3.  Summaries of all the classes in a dependency library
-4.  A pasted image
-5.  A pasted stacktrace
-6.  A diff of a Git commit
-7.  A page of dependency documentation pasted via URL.
-8.  Usages of a specific method
-9.  An ordinary, editable source file
+1. An image file added from local disk
+2. An ordinary source file
+3. Summaries of all the classes in a dependency library
+4. A pasted image
+5. A pasted stacktrace
+6. A diff of a Git commit
+7. A page of dependency documentation pasted via URL.
+8. Usages of a specific method
+9. An ordinary, editable source file
 
 You can click on any of the context badges to open a preview of its contents; you can also right-click on a badge to interact with it. This is particularly useful for pulling files affected by a Git commit into the Workspace (requires enabling Advanced UI in the Settings).
 

@@ -2,16 +2,16 @@
 
 You can use Brokk to code in any language, but the languages with full Context Engine support include
 
--   Java
--   Scala
--   C++, C
--   C#
--   Rust
--   Go
--   Python
--   JavaScript, JSX
--   TypeScript, TSX
--   PHP
+- Java
+- Scala
+- C++, C
+- C#
+- Rust
+- Go
+- Python
+- JavaScript, JSX
+- TypeScript, TSX
+- PHP
 
 ## Why did Brokk stop working after upgrading from version 0.15?
 
