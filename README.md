@@ -18,4 +18,3 @@ The Brokk webapp backend fetches these markdown files from GitHub, converts them
 1. Edit markdown files directly in this repo
 2. Place images in `images/` and reference as `![alt](images/filename.png)`
 3. Changes go live within 1 hour (cache TTL)
-

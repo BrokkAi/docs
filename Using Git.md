@@ -10,12 +10,12 @@ The rest of the Git Bar is self explanatory so we'll move onto the Log tab first
 
 ![](images/using-git-log-2.png)
 
--   **Capture Diff:** This is the most commonly used integration point, useful for asking questions, troubleshooting regressions, and performing merges.
--   **How it works:** Right-click any set of commits or file changes, in the log and select Capture Diff. This adds a unified diff of the selected changes to your Workspace.
--   **Capturing Older Revisions:** Primarily used to give the LLM an anchor point for a particularly complex diff.
--   **How it works:** Double-click a file from a commit’s changes list or from the file’s history. From the preview that opens, select Capture Diff.
--   **Best for:** Understanding the state of code at a specific point in time, or for tasks like backporting a fix.
--   **Compare with Local:** Opens a human-readable diff window from which you can revert changes by chunk.
+- **Capture Diff:** This is the most commonly used integration point, useful for asking questions, troubleshooting regressions, and performing merges.
+- **How it works:** Right-click any set of commits or file changes, in the log and select Capture Diff. This adds a unified diff of the selected changes to your Workspace.
+- **Capturing Older Revisions:** Primarily used to give the LLM an anchor point for a particularly complex diff.
+- **How it works:** Double-click a file from a commit’s changes list or from the file’s history. From the preview that opens, select Capture Diff.
+- **Best for:** Understanding the state of code at a specific point in time, or for tasks like backporting a fix.
+- **Compare with Local:** Opens a human-readable diff window from which you can revert changes by chunk.
 
 ## Git Worktree Support
 
@@ -51,25 +51,25 @@ The **Pull Requests** tab in Brokk shows PRs from your project’s GitHub reposi
 
 ### Key Features
 
--   **Unified PR List**  
+- **Unified PR List**  
     View all pull requests for the repository in a single, scrollable list.
--   **Filters**  
+- **Filters**  
     Narrow down PRs by **Status**, **Author**, **Label**, **Assignee**, or **Review State**.
--   **PR Details Pane**  
+- **PR Details Pane**  
     Selecting a PR displays its **Commits** and **Changed Files** in the panel below.
 
 ### Actions on a Selected PR
 
--   **Check Out**  
+- **Check Out**  
     Instantly switch your local workspace to the PR’s branch with a single click.
--   **View Diff**  
+- **View Diff**  
     Open a full, graphical side‑by‑side diff viewer for each file changed in the PR.
 
 ![](images/using-git-actions-on-a-selected-pr-7.png)
 
--   **Capture for Review**  
+- **Capture for Review**  
     Capture the PR diff into your Brokk AI context so the LLM can review or summarize it. (Configurable review instructions are auto‑populated.)
--   **Open in Browser**  
+- **Open in Browser**  
     Launch the PR directly in your web browser.
 
 ## Creating a Pull Request in Brokk
@@ -78,13 +78,13 @@ Brokk lets you raise a GitHub Pull Request (PR) from any branch local or remote 
 
 ### Opening the Create PR Dialog
 
--   Open the **Log** panel
--   In the **Branches – Local or Remote** list within the commits section, select the branch you want to merge.
--   Click **\+** button.
+- Open the **Log** panel
+- In the **Branches – Local or Remote** list within the commits section, select the branch you want to merge.
+- Click **\+** button.
 
 ![](images/using-git-opening-the-create-pr-dialog-8.png)
 
--   By default, the dialog compares your selected branch against `origin/master`.
+- By default, the dialog compares your selected branch against `origin/master`.
 
 ![](images/using-git-opening-the-create-pr-dialog-9.png)
 
@@ -95,23 +95,23 @@ Brokk’s Create PR dialog gives you everything you need to scope, describe, and
 
 **Header**
 
--   **Target branch** – the branch you’re merging _into_.
--   **Source branch** – the branch you’re merging _from_ (local or remote).
+- **Target branch** – the branch you’re merging _into_.
+- **Source branch** – the branch you’re merging _from_ (local or remote).
 
 **Title & Description**
 
--   Auto‑generated in Markdown by Brokk’s quick‑model.
--   Edit both fields as needed.
+- Auto‑generated in Markdown by Brokk’s quick‑model.
+- Edit both fields as needed.
 
 **Tabs**
 
--   **Commits** – lists commits that differ from the target branch.
--   **Changes** – shows a file‑level diff across those commits.
+- **Commits** – lists commits that differ from the target branch.
+- **Changes** – shows a file‑level diff across those commits.
 
 **Footer**
 
--   **Create PR** / **Cancel** actions.
--   A yellow warning icon appears if local and remote branches are out‑of‑sync.
+- **Create PR** / **Cancel** actions.
+- A yellow warning icon appears if local and remote branches are out‑of‑sync.
 
 ![](images/using-git-dialog-layout-10.png)
 
@@ -119,20 +119,20 @@ ___
 
 ### Branch & Commit Indicators
 
--   **Blue‑highlighted commits** → local commits not yet pushed
--   **No upstream branch** → the first push automatically creates one
--   **Sync warning** → push or pull to resolve before creating the PR
+- **Blue‑highlighted commits** → local commits not yet pushed
+- **No upstream branch** → the first push automatically creates one
+- **Sync warning** → push or pull to resolve before creating the PR
 
 ___
 
 ### Typical Workflow
 
--   Finish work on your feature branch
--   Open **Log**, select the branch, and push if there are blue (unpushed) commits
--   Click **Create PR**
--   (Optional) Change the Target or Source branch—Title and Description will refresh
--   Review the **Commits** and **Changes** tabs
--   Edit Title/Description if required
--   Click **Create PR**—Brokk opens the new PR in your default browser
+- Finish work on your feature branch
+- Open **Log**, select the branch, and push if there are blue (unpushed) commits
+- Click **Create PR**
+- (Optional) Change the Target or Source branch—Title and Description will refresh
+- Review the **Commits** and **Changes** tabs
+- Edit Title/Description if required
+- Click **Create PR**—Brokk opens the new PR in your default browser
 
 Next: [Issue Tracker Integration](/documentation/issue-tracker-integration)

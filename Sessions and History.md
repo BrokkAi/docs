@@ -16,9 +16,9 @@ The Activity panel allows you to go back to any point in time of your Session, e
 
 ![](images/sessions-and-history-history-within-a-session-3.png)
 
-1.  **Undo to Here**: This action reverts both your file changes on disk and the Context selections to the state they were in at that selected point in history. Any file modifications made after that point will be undone. (But Git history is not touched.)
-2.  **Copy Context**: This option reverts only the Context selections to the selected point. Critically, this action does not affect any changes made to your files on disk. This is ideal for scenarios where you've completed a side quest, committed those file changes, and now want the AI to refocus on your main task as it was before the diversion, while keeping the code from your side quest intact.
-3.  **Copy Context with History**: Copies the Context selections contents and also the conversation history from the previous state; useful for when you need to continue building on your conversation thread from the main development line.
+1. **Undo to Here**: This action reverts both your file changes on disk and the Context selections to the state they were in at that selected point in history. Any file modifications made after that point will be undone. (But Git history is not touched.)
+2. **Copy Context**: This option reverts only the Context selections to the selected point. Critically, this action does not affect any changes made to your files on disk. This is ideal for scenarios where you've completed a side quest, committed those file changes, and now want the AI to refocus on your main task as it was before the diversion, while keeping the code from your side quest intact.
+3. **Copy Context with History**: Copies the Context selections contents and also the conversation history from the previous state; useful for when you need to continue building on your conversation thread from the main development line.
 
 Both "Copy Workspace" actions are represented visually in the Sessions list by arrows from the source entry to the target.
 
