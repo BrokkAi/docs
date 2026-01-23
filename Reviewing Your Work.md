@@ -10,4 +10,8 @@ Use this to attach the diff as Context, where it will be visible to [Ask](https:
 
 ![](images/reviewing-your-work-image-3.png)
 
+All tabs with the exception of the the Build tab can be undocked from the main window. This includes the Review, Preview, and Terminal tabs. ONce undocked they become standalone windows that can be moved and resized. These windows can be docked to the main window and any time from within each undocked window.
+
+![](images/undock-review-preview-terminal-image-1.png)
+
 Next: [Using Git](/documentation/using-git)
