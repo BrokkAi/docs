@@ -1,138 +1,106 @@
-## Git Basics
+## Connect Your GitHub Account
 
-The Git Panel, located at the left side of the Brokk interface, is your primary interface to bring Git-based historical context into the Workspace. It’s divided into six main tabs: Project Files, Commit, Worktrees, Log, Pull Requests and Issues.  
+Brokk supports a wide variety of integrations with Git. To connect your GitHub account, navigate to `Settings -> Global -> GitHub -> Connect GitHub Account`.
 
-![](images/using-git-git-basics-1.png)
+![](images/using-git-connect-account.png)
 
-The rest of the Git Bar is self explanatory so we'll move onto the Log tab first.
+Once connected, you’ll now have 4 separate panels for managing Issues, Pull Requests, Log, and Worktrees.
 
-## Log
+## Log Sidebar
 
-![](images/using-git-log-2.png)
+The log sidebar displays both branches and commit history for your current project.
 
-- **Capture Diff:** This is the most commonly used integration point, useful for asking questions, troubleshooting regressions, and performing merges.
-- **How it works:** Right-click any set of commits or file changes, in the log and select Capture Diff. This adds a unified diff of the selected changes to your Workspace.
-- **Capturing Older Revisions:** Primarily used to give the LLM an anchor point for a particularly complex diff.
-- **How it works:** Double-click a file from a commit’s changes list or from the file’s history. From the preview that opens, select Capture Diff.
-- **Best for:** Understanding the state of code at a specific point in time, or for tasks like backporting a fix.
-- **Compare with Local:** Opens a human-readable diff window from which you can revert changes by chunk.
+### Branches
 
-## Git Worktree Support
+- **Browse Branches**: View local, remote, and tagged branches in a unified list.
+  
+  ![](images/using-git-branch-panel.png)
 
-Worktrees let you have **multiple check‑outs of the same repository**, allowing for parallel feature work manually or with the Architect.
+- **Interacting with Branches**: Right-click to access context-specific options.
+  
+  ![](images/using-git-branch-options.png)
 
-![](images/using-git-git-worktree-support-3.png)
+  - **Checkout**: Switch workspace to this branch.
+  - **Create New Branch**: Create a new branch from this base.
+  - **Merge**: Merge the branch into your current checkout.
+  - **Capture Diff**: View diffs for the branch.
 
-Add a new worktree with the + button; remove one with -.
+- **Fetch**: Manually pull in remote changes by selecting the “Fetch” option in the bottom right.
+
+### Commits
+
+The **Commits** panel displays the commit history of your project, similar to the output of `git log`.
+
+![](images/using-git-commit-panel.png)
+
+- **Interacting with Commits**: Right-clicking on a commit reveals a context menu with options to manage your history.
+
+  ![](images/using-git-commit-options.png)
+
+  - **Capture Diff**: Bring the changes from this commit into your context.
+  - **Review Commits**: Review the selected commits with Guided Review.
+  - **Capture workspace content at this revision**: Capture the entire state of the workspace at this commit.
+  - **View Diff**: Open a view of the diffs in this commit.
+  - **Compare All to Local**: Compare the state of the commit to your local workspace.
+  - **Soft Reset to Here**: Reset your current branch to this commit, keeping changes staged.
+  - **Revert Commit**: Create a new commit that reverts the changes in this commit.
+  - **Cherry pick into master**: Cherry pick this commit into the master branch.
+  - **Create Branch From Commit**: Start a new branch from this exact point in history.
+
+- **Note**: Use `Shift + Right Click` to select multiple commits to review or capture to the context window.
+
+## Git Worktree Sidebar
+
+The git worktree sidebar lets you have the same reposity checked out **multiple times**, allowing for parallel feature work
+
+![](images/using-git-worktree-panel.png)
+
+### Creating a Worktree
+
+![](images/using-git-worktree-create.png)
+
+- **Create a new branch**: Choose a branch name and base branch for your worktree.
+  - Alternatively, use an existing branch
+- **Copy Context to Worktree Session**: Give the worktree the same active context from your current session.
 
 Worktrees share the same `.git` object store, which makes them lighter-weight than a full clone. Additionally, Brokk projects are worktree-aware; worktrees will inherit the primary checkout's configuration.
 
-When a worktree window is active, an additional Merge button will appear. Clicking on that will open a dialog like this:
-
-![](images/using-git-git-worktree-support-4.png)
-
 Worktrees are not tied to a single branch; you can check out different branches from the UI in the Log tab, just like with the primary repo. However, each worktree must have a distinct branch open: because of the git index sharing, you cannot have the same branch active in multiple worktrees.
 
-## Merge Agent
+## Pull Requests Sidebar
 
-![](images/using-git-merge-agent-5.png)
+The pull requests sidebar allows you to browse and filter PRs from your project's GitHub repository. **Note:** If the repo isn't on GitHub, this tab will not appear.
 
-Brokk will automatically detect and offer to resolve Git merge conflicts for you, understanding the semantic intent behind code changes on both branches, not just textual differences.
+![](images/using-git-pr-panel.png)
 
-**How it works:** The LLM is given commit history, PR descriptions, and code evolution across both branches to understand what each change was trying to accomplish. It builds semantic graphs (class hierarchies, call graphs, dependencies) to grasp how changes interact, then resolves conflicts based on the actual intent of the code. After resolution, it validates everything—compiling, linting, and running tests to ensure the merge works.
+You can search pull requests by **Status**, **Author**, **Label**, or **Assignee**.
 
-**Best for:** Complex merge conflicts where understanding the purpose of changes matters more than choosing between text blocks. Particularly valuable for long-lived feature branches, refactoring conflicts, or when the same functionality was modified differently on each branch.
+Selecting an item from the list will display all commits and changed files on that pull request:
 
-## Pull Requests
+![](images/using-git-pr-details.png)
 
-The **Pull Requests** tab in Brokk shows PRs from your project’s GitHub repository. (If the repo isn’t on GitHub, this tab won’t appear.)
+- You can right click a pull request to view the diff, open the PR in your browser, or check out the PR in your workspace.
 
-![](images/using-git-pull-requests-6.png)
+  - **Note**: Brokk will automatically look for a session when you check out a pull request. This can be used for Guided Review.
 
-### Key Features
-
-- **Unified PR List**  
-    View all pull requests for the repository in a single, scrollable list.
-- **Filters**  
-    Narrow down PRs by **Status**, **Author**, **Label**, **Assignee**, or **Review State**.
-- **PR Details Pane**  
-    Selecting a PR displays its **Commits** and **Changed Files** in the panel below.
-
-### Actions on a Selected PR
-
-- **Check Out**  
-    Instantly switch your local workspace to the PR’s branch with a single click.
-- **View Diff**  
-    Open a full, graphical side‑by‑side diff viewer for each file changed in the PR.
-
-![](images/using-git-actions-on-a-selected-pr-7.png)
-
-- **Capture for Review**  
-    Capture the PR diff into your Brokk AI context so the LLM can review or summarize it. (Configurable review instructions are auto‑populated.)
-- **Open in Browser**  
-    Launch the PR directly in your web browser.
+- By right clicking on a commit, you can view the diff, compare it against your local branch, or capture the diff to your active context window.
 
 ## Creating a Pull Request in Brokk
 
-Brokk lets you raise a GitHub Pull Request (PR) from any branch local or remote without leaving the application. You’ll see the **Create PR** button (+ symbol surrounded by a diamond) in the **Log** panel in the commits section whenever your project is a Git repository.
+Brokk lets you raise a GitHub Pull Request (PR) from any branch local or remote without leaving the application. You’ll see the **Create PR** button (+ symbol surrounded by a diamond) in the **Log sidebar** in the commits section:
 
-### Opening the Create PR Dialog
+![](images/using-git-create-pr-button.png)
 
-- Open the **Log** panel
-- In the **Branches – Local or Remote** list within the commits section, select the branch you want to merge.
-- Click **\+** button.
+Select your target branch and source branch for the pull request. Brokk will automatically suggest a title and description for your PR.
 
-![](images/using-git-opening-the-create-pr-dialog-8.png)
+![](images/using-git-create-pr-dialog.png)
 
-- By default, the dialog compares your selected branch against `origin/master`.
+## Merge Agent
 
-![](images/using-git-opening-the-create-pr-dialog-9.png)
+Brokk will automatically detect and offer to resolve Git merge conflicts for you, using **Merge Agent**.
 
-### Dialog Layout
+![](images/using-git-merge-agent.png)
 
-**Purpose**  
-Brokk’s Create PR dialog gives you everything you need to scope, describe, and review your pull request without context‑switching.
-
-**Header**
-
-- **Target branch** – the branch you’re merging _into_.
-- **Source branch** – the branch you’re merging _from_ (local or remote).
-
-**Title & Description**
-
-- Auto‑generated in Markdown by Brokk’s quick‑model.
-- Edit both fields as needed.
-
-**Tabs**
-
-- **Commits** – lists commits that differ from the target branch.
-- **Changes** – shows a file‑level diff across those commits.
-
-**Footer**
-
-- **Create PR** / **Cancel** actions.
-- A yellow warning icon appears if local and remote branches are out‑of‑sync.
-
-![](images/using-git-dialog-layout-10.png)
-
-___
-
-### Branch & Commit Indicators
-
-- **Blue‑highlighted commits** → local commits not yet pushed
-- **No upstream branch** → the first push automatically creates one
-- **Sync warning** → push or pull to resolve before creating the PR
-
-___
-
-### Typical Workflow
-
-- Finish work on your feature branch
-- Open **Log**, select the branch, and push if there are blue (unpushed) commits
-- Click **Create PR**
-- (Optional) Change the Target or Source branch—Title and Description will refresh
-- Review the **Commits** and **Changes** tabs
-- Edit Title/Description if required
-- Click **Create PR**—Brokk opens the new PR in your default browser
+**How it works:** The LLM is given commit history, PR descriptions, and code evolution across both branches to understand what each change was trying to accomplish. It builds semantic graphs (class hierarchies, call graphs, dependencies) to grasp how changes interact, then resolves conflicts based on the actual intent of the code. After resolution, it validates everything - compiling, linting, and running tests to ensure the merge works.
 
 Next: [Issue Tracker Integration](/documentation/issue-tracker-integration)

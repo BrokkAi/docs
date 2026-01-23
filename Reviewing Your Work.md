@@ -1,16 +1,20 @@
-Besides looking at [diffs from individual tasks](https://blog.brokk.ai/sessions/), Brokk gives you an overview diff of all changes made in the current Session:
+After making changes, Brokk can audit its changes with Guided Review.
 
-![](images/reviewing-your-work-image-1.png)
+To access Guided Review, select the “Review” tab at the top of your workspace, then hit the “Guided Review” button.
 
-Of course, you can review this diff by hand, but like most Brokk previews, this includes a Capture button:
+![](images/reviewing-your-work-initiate-review.png)
 
-![](images/reviewing-your-work-image-2.png)
+Guided Review Structure: Your review will be split into 5 sections
 
-Use this to attach the diff as Context, where it will be visible to [Ask](https://blog.brokk.ai/actions-toolkit/) actions. You can also right-click on the badge to attach the full (or summarized) contents of all referenced files with a single click:
+- **Overview**: Summary of changes made on the branch
+- **Key Changes**: Descriptive list of changes
+- **Design**: Potential high-level issues from the changes
+- **Tactical**: Potential bugs & edge-cases from the changes
+- **Tests**: Recommended changes to the test suite
 
-![](images/reviewing-your-work-image-3.png)
+![](images/reviewing-your-work-summary.png)
 
-All tabs with the exception of the the Build tab can be undocked from the main window. This includes the Review, Preview, and Terminal tabs. ONce undocked they become standalone windows that can be moved and resized. These windows can be docked to the main window and any time from within each undocked window.
+All tabs with the exception of the the Build tab can be undocked from the main window. This includes the Review, Preview, and Terminal tabs. Once undocked they become standalone windows that can be moved and resized. These windows can be docked to the main window and any time from within each undocked window.
 
 ![](images/undock-review-preview-terminal-image-1.png)
 

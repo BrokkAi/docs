@@ -1,4 +1,4 @@
-After any **Code** action, Brokk:
+After any [Code action](https://brokk.ai/documentation/actions-toolkit#code), Brokk:
 
 1. Compiles or lints the project (Gradle, Maven, sbt, ant, ninja… or a custom shell command).
 2. Runs the tests currently in the Workspace
