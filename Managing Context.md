@@ -34,7 +34,7 @@ Brokk can add many types of context to the Workspace, some of these are:
 8. Usages of a specific method
 9. An ordinary, editable source file
 
-You can click on any of the context badges to open a preview of its contents; you can also right-click on a badge to interact with it. This is particularly useful for pulling files affected by a Git commit into the Workspace (requires enabling Advanced UI in the Settings).
+You can click on any of the context badges to open a preview of its contents; you can also right-click on a badge to interact with it. This is particularly useful for pulling files affected by a Git commit into the Workspace. Added in the .18 and .19 releases respectively is the ability to both mark fragment read only and Pin them. When a fragment is marked Read Only it informs the LLM that a correct solution should not change those files or code fragments. When a fragment is pinned it is always included in the context, even if it is not relevant to the current task. Enabling Advanced UI in the Settings is required to access these features.
 
 ![](images/managing-context-controlling-your-context-5.png)
 
