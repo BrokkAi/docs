@@ -13,7 +13,7 @@ The Brokk Interface
 
 Brokk’s **Code Intelligence** engine performs deep static analysis to build a semantic model of your entire codebase. It understands files, folders, classes, methods, and more not just as text, but as a structured program. This allows Brokk to answer complex questions about your code, trace logic across files, and provide context that would be impossible to fit into a standard LLM prompt.
 
-Brokk builds code intelligens when you first open a workspace, and keeps it up to date as you make changes. 
+inBrokk builds code intelligence when you first open a workspace, and keeps it up to date as you make changes. 
 
 ![](images/introduction-code-intelligence-1.png)
 
