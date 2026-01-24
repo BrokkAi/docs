@@ -31,6 +31,6 @@ You are able to navigate to the summarize option via the context menu to refine 
 
 ![](images/introduction-code-intelligence-4.png)
 
-Brokk’s **Code Intelligence** is the foundation of the it's ability to provide intelligent answers, fewer hallucinations, and higher-quality edits on very large projects.
+Brokk’s **Code Intelligence** is the foundation of it's ability to provide intelligent answers, fewer hallucinations, and higher-quality edits on very large projects.
 
 Next: [Quick Start](/documentation/quick-start)
