@@ -48,7 +48,7 @@ You can quickly add files, folders, or specific classes/methods to your context 
 
 ## Initial Setup
 
-When you first open a folder in VS Code with the Brokk extension active, it will begin building its **Code Intelligence** index. You can monitor the progress in the status bar at the bottom right or in the Brokk side panel.
+When you first open a folder in VS Code with the Brokk extension active, You can monitor the progress in the status bar at the bottom left or in the Brokk side panel.
 
 ![](images/vscode-status-bar-indexing.png)
 
