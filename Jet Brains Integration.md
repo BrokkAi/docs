@@ -1,16 +1,54 @@
-# JetBrains IDEs Integration
+# JetBrains IntelliJ Integration
+
+Brokk has added a seamless integration with JetBrains IntelliJ IDE**, allowing you to run your Brokk agents directly from the IDE. This integration enables developers to leverage the power of Brokk's agents while working on their code, providing a more efficient and streamlined workflow.
+
+**Note: While testing was done with IntelliJ, the Brokk Code assistant is an ACP integration and should work with any JetBrains IDE that supports ACP.
 
 ## Requirements
-- Note: will list supported JetBrains IDE versions, Brokk install, API key, and plugin prerequisites.
+
+- IntelliJ Installed with a basic subscription to access the IntelliJ AI assistant.
+- Brokk TUI installed and configured with API key.
+
 
 ## Configure Brokk in JetBrains
-- Note: will document plugin install path, settings location, API key entry, and context mapping toggle.
 
-## Warning
-- Note: will confirm any defaults or editor settings that change when enabling Brokk.
+This can be done by Installing Brokk TUI and running the following command in the terminal:
+
+```bash
+brokk install intellij
+```
+
+- Note: if this file already exists you may need to run --force to overwrite the existing file.
+
+If you have existing configurationsfor IntelliJ you can add the lines below to simply add the Brokk configuration to your existing file.
+
+Edit the file below:
+
+```
+$HOME/.jetbrains/acp.json
+```
+
+```bash
+# Brokk Configuration
+{
+  "default_mcp_settings": {},
+  "agent_servers": {
+    "Brokk Code": {
+      "command": "brokk",
+      "args": [
+        "acp"
+      ],
+      "env": {}
+    }
+  }
+}
+```
 
 ## Verify and use
-- Note: will outline how to confirm connection status and start a Brokk session inside the IDE.
+
+Once installed properly you will see the Brokk selection along with the agent selection in the intelliJ AI assistant. You can select Brokk and use it to run your agents directly from the IDE
+
+![](images/intellij-brokk-verify.png)
 
 Next: [Code Intelligence](/documentation/code-intelligence)
 
