@@ -6,7 +6,7 @@ Brokk has added a seamless integration with JetBrains IntelliJ IDE**, allowing y
 
 ## Requirements
 
-- IntelliJ Installed CE with a free subscription to access the IntelliJ AI assistant plugin.
+- IntelliJ Installed with a free subscription to access the IntelliJ AI assistant plugin.
 - Brokk TUI installed and configured with API key.
 
 
